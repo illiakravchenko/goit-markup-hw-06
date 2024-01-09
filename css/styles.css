@@ -1,5 +1,5 @@
-.hide {
-  display: none;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +31,6 @@ ul {
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
 }
 
 @media screen and (min-width: 768px) {
@@ -246,12 +245,10 @@ img {
   transform: translateX(-100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  visibility: hidden;
 }
 
 .mobile-menu.is-open {
   transform: translateX(0);
-  visibility: visible;
 }
 
 .mobile-menu-btn {
@@ -1135,17 +1132,16 @@ img {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   height: 100%;
+}
+
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-
-.backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+.no-scroll {
+  overflow: hidden;
 }
-
 .modal {
   position: absolute;
   top: 50%;

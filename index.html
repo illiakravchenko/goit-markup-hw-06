@@ -32,10 +32,10 @@
               <a class="header-nav-link current" href="./index.html">Studio</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link" href="">Portfolio</a>
+              <a class="header-nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link" href="">Contacts</a>
+              <a class="header-nav-link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -55,11 +55,10 @@
             </li>
           </ul>
         </address>
-        <button class="menu-btn" type="button">
+        <button class="menu-btn js-open-menu" type="button">
           <svg class="menu-btn-icon" width="24" height="24">
             <use
               href="./images/icons.svg#icon-header-menu-btn"
-              aria
               aria-label="Open menu button"></use>
           </svg>
         </button>
@@ -71,7 +70,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -334,7 +335,7 @@
       </section>
 
       <!--Our portfolio section-->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -565,7 +566,7 @@
     </main>
 
     <!--FOOTER-->
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="container footer-container">
         <div class="footer-logo-box">
           <a class="footer-logo" href="./index.html"
@@ -636,9 +637,13 @@
     </footer>
 
     <!--Modal window-->
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn" type="button" aria-label="Modal close button">
+        <button
+          class="modal-btn"
+          type="button"
+          aria-label="Modal close button"
+          data-modal-close>
           <svg class="modal-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -716,8 +721,8 @@
     </div>
 
     <!-- Mobile menu-->
-    <div class="mobile-menu is-open">
-      <button class="mobile-menu-btn" type="button">
+    <div class="mobile-menu js-menu-container">
+      <button class="mobile-menu-btn js-close-menu" type="button">
         <svg class="mobile-menu-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
@@ -727,10 +732,10 @@
           <a class="mobile-menu-link current" href="">Studio</a>
         </li>
         <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="">Portfolio</a>
+          <a class="mobile-menu-link" href="#portfolio">Portfolio</a>
         </li>
         <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="">Contacts</a>
+          <a class="mobile-menu-link" href="#contacts">Contacts</a>
         </li>
       </ul>
 
@@ -781,5 +786,12 @@
         </li>
       </ul>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
